@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 4.8 Web Storage: salvando dados em seu navegador</title>
+
+<style>
+    label, button{
+        display: block;
+        margin-top: 10px;
+    }
+    .labelRadio{
+        display: inline;
+    }
+</style>
+</head>
+<body>
+    <h1>Formulário de contato</h1>
+    <form id="contactForm">
+        <label for="name">Nome: </label>
+        <input type="text" id="name" required maxlength="256"/>
+        <label for="email">E-mail: </label>
+        <input type="text" id="email" required maxlength="356"/>
+        <label for="message">Mensagem: </label>
+        <textarea required id="message"></textarea>
+        <label>Escolha onde voce quer armazenar os dados: </label>
+        <input type="radio" name="storage" id="localStorage" value="local" required>
+        <label class="labelRadio" for="localStorage">Local Storage</label>
+        <input type="radio" name="storage" id="sessionStorage" value="session" >
+        <label class="labelRadio" for="sessionStorage">Session Storage</label>
+        <button type="submit">Enviar</button>
+    </form>
+    <button id="showLocalStorage">Mostra dados do Local Storage</button>
+    <button id="showSessionStorage">Mostra dados do Session Storage</button>
+    <button id="clearSession">Reiniciar Seção</button>
+    
+    <div id="storageData">
+        <div id="localStorageData" class="storage-section"></div>
+        <div id="SessionStorageData"class="storage-section"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
